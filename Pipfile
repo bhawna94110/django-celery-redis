@@ -17,9 +17,13 @@ django-cors-headers = "*"
 django-templated-mail = "*"
 redis = "*"
 celery = "*"
+flower = "*"
+importlib-metadata = "*"
+django-redis = "*"
 
 [dev-packages]
 autopep8 = "*"
+pytest-watch = "*"
 
 [requires]
 python_version = "3.9"
