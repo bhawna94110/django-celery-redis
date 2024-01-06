@@ -20,6 +20,8 @@ celery = "*"
 flower = "*"
 importlib-metadata = "*"
 django-redis = "*"
+django-rest-swagger = "*"
+drf-yasg = "*"
 
 [dev-packages]
 autopep8 = "*"

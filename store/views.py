@@ -63,8 +63,8 @@ class ReviewViewSet(ModelViewSet):
     def get_queryset(self):
         return Review.objects.filter(product_id=self.kwargs['product_pk'])
 
-    def get_serializer_context(self):
-        return {'product_id': self.kwargs['product_pk']}
+    # def get_serializer_context(self):
+    #     return {'product_id': self.kwargs['product_pk']}
 
 
 class CartViewSet(CreateModelMixin,
@@ -85,8 +85,8 @@ class CartItemViewSet(ModelViewSet):
             return UpdateCartItemSerializer
         return CartItemSerializer
 
-    def get_serializer_context(self):
-        return {'cart_id': self.kwargs['cart_pk']}
+    # def get_serializer_context(self):
+    #     return {'cart_id': self.kwargs['cart_pk']}
 
     def get_queryset(self):
         return CartItem.objects \
@@ -154,8 +154,8 @@ class OrderViewSet(ModelViewSet):
 class ProductImageViewSet(ModelViewSet):
     serializer_class = ProductImageSerializer
     
-    def get_serializer_context(self):
-        return {'product_id': self.kwargs['product_pk']}
+    # def get_serializer_context(self):
+    #     return {'product_id': self.kwargs['product_pk']}
     
     def get_queryset(self):
         return ProductImage.objects.filter(product_id=self.kwargs['product_pk'])
